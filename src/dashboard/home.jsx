@@ -45,6 +45,7 @@ export const HomePage = () => {
                                         color: service.status == 1 ? 'rgb(0, 255, 0)' : 'rgb(255, 0, 0)'
                                     }}
                                 >
+                                    {service.status == 1 ? 'Online' : 'Offline'}
                                 </p>
                             </div>
                         ))
