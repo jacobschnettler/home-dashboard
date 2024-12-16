@@ -1,14 +1,10 @@
-import { Card } from '../components'
+import { Card, PorchCam } from '../components'
 
 export const SecurityPage = () => {
     return (
         <div className="row">
             <div className="col-md-6">
-                <Card 
-                    title='Porch Cam'
-                >
-                    asdasdasdk
-                </Card>
+                <PorchCam scale={0.325} />
             </div>
         </div>
     )

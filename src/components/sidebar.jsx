@@ -5,7 +5,7 @@ export const Sidebar = ({ height, width, page }) => {
 
     const sidebarItems = [
         {
-            icon: <i className="fas fa-home"></i>,
+            icon: <i className="fas fa-tachometer-alt"></i>,
             page: 'home'
         },
         {
@@ -15,6 +15,14 @@ export const Sidebar = ({ height, width, page }) => {
         {
             icon: <i className="fas fa-running"></i>,
             page: 'fitness'
+        },
+        {
+            icon: <i className="fas fa-home"></i>,
+            href: process.env.REACT_APP_HOMEASSISTANT
+        },
+        {
+            icon: <i className="fas fa-server"></i>,
+            href: process.env.REACT_APP_NAS_ONE
         }
     ]
 
@@ -23,17 +31,27 @@ export const Sidebar = ({ height, width, page }) => {
             <div style={{ paddingTop: '15px' }}>
                 {sidebarItems.map((item, index) => (
                     <div key={index} style={{ paddingBottom: '15px' }}>
-                        <a
-                            href='#'
-                            style={{ fontSize: "30px" }}
-                            onClick={function (e) {
-                                e.preventDefault()
-                                silentUpdate('?page=' + item.page)
-                                setPage(item.page)
-                            }}
-                        >
-                            {item.icon}
-                        </a>
+                        {item.href ? (
+                            <a
+                                href={item.href}
+                                style={{ fontSize: "30px", textDecoration: 'none' }}
+                                target="_blank"
+                            >
+                                {item.icon}
+                            </a>
+                        ) : (
+                            <a
+                                href='#'
+                                style={{ fontSize: "30px" }}
+                                onClick={function (e) {
+                                    e.preventDefault()
+                                    silentUpdate('?page=' + item.page)
+                                    setPage(item.page)
+                                }}
+                            >
+                                {item.icon}
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>

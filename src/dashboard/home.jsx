@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Spinner } from 'react-bootstrap'
-import { Card } from '../components'
+import { Card, PorchCam } from '../components'
 
 import API from '../api'
 
@@ -27,6 +27,10 @@ export const HomePage = () => {
 
     return (
         <div className="row">
+            <div className="col-md-4">
+                <PorchCam scale={0.21} />
+            </div>
+
             <div className="col-md-4">
                 <Card
                     title={LoadedServices && 'Services'}
