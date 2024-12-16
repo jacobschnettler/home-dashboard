@@ -1,9 +1,9 @@
-import { Card, PorchCam } from '../components'
+import { PorchCam } from '../components'
 
 export const SecurityPage = () => {
     return (
-        <div className="row">
-            <div className="col-md-6">
+        <div style={{ display: 'flex' }}>
+            <div style={{ padding: '15px' }}>
                 <PorchCam scale={0.325} />
             </div>
         </div>

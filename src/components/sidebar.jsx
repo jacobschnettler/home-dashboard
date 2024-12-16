@@ -5,24 +5,20 @@ export const Sidebar = ({ height, width, page }) => {
 
     const sidebarItems = [
         {
-            icon: <i className="fas fa-tachometer-alt"></i>,
+            icon: <i className="fas fa-home"></i>,
             page: 'home'
         },
         {
             icon: <i className="fas fa-camera"></i>,
             page: 'security'
         },
-        {
-            icon: <i className="fas fa-running"></i>,
-            page: 'fitness'
-        },
-        {
-            icon: <i className="fas fa-home"></i>,
-            href: process.env.REACT_APP_HOMEASSISTANT
-        },
+        // {
+        //     icon: <i className="fas fa-running"></i>,
+        //     page: 'fitness'
+        // },
         {
             icon: <i className="fas fa-server"></i>,
-            href: process.env.REACT_APP_NAS_ONE
+            href: process.env.REACT_APP_NAS
         }
     ]
 

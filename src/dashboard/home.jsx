@@ -26,12 +26,10 @@ export const HomePage = () => {
     }, [])
 
     return (
-        <div className="row">
-            <div className="col-md-4">
-                <PorchCam scale={0.21} />
-            </div>
+        <div style={{ display: 'flex' }}>
+            <PorchCam scale={0.25} />
 
-            <div className="col-md-4">
+            <div style={{ width: "650px", paddingLeft: '25px' }}>
                 <Card
                     title={LoadedServices && 'Services'}
                 >
